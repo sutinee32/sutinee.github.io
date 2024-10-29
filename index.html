@@ -10,6 +10,10 @@
 </head>
 <body>
 
+    <header style="background-color: white;">
+        <div id="navbar-placeholder"></div>
+    </header>
+    
  <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
@@ -118,16 +122,26 @@
         <p>สั่งซื้อสำเร็จจ้า!</p>
     </div>
 </div>
-    <script>
-        function addToCart() {
-            // แสดงการแจ้งเตือน
-            const notification = document.getElementById('notification');
-            notification.classList.add('show');
 
-            // ซ่อนการแจ้งเตือนหลังจาก 3 วินาที
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
+ <div id="footer-placeholder"></div> <!-- Footer placeholder --> 
+    <!-- Navbar & Footer Scripts -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Toast Function for Order Confirmation
+        function showOrderToast() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
         }
     </script>
 
