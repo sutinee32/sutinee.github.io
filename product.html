@@ -10,14 +10,9 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <h1>ร้านค้า</h1>
-        <ul>
-            <li><a href="#home">หน้าหลัก</a></li>
-            <li><a href="#products">สินค้า</a></li>
-            <li><a href="#contact">ติดต่อเรา</a></li>
-        </ul>
-    </nav>
+    <header style="background-color: white;">
+        <div id="navbar-placeholder"></div>
+    </header>
         
     <section id="products" class="product-section">
         
@@ -96,23 +91,31 @@
         </div>
     </section>
 
-    <!-- การแจ้งเตือน -->
-    <div id="notification" class="notification">
+      <div id="notification" class="notification">
         <p>สั่งซื้อสำเร็จจ้า!</p>
     </div>
 </div>
-    <script>
-        function addToCart() {
-            // แสดงการแจ้งเตือน
-            const notification = document.getElementById('notification');
-            notification.classList.add('show');
 
-            // ซ่อนการแจ้งเตือนหลังจาก 3 วินาที
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
+ <div id="footer-placeholder"></div> <!-- Footer placeholder --> 
+    <!-- Navbar & Footer Scripts -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Toast Function for Order Confirmation
+        function showOrderToast() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
         }
     </script>
-
 </body>
 </html>
