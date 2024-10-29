@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านค้า</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>ร้านค้า</h1>
+        <ul>
+            <li><a href="#home">หน้าหลัก</a></li>
+            <li><a href="#products">สินค้า</a></li>
+            <li><a href="#contact">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <!-- Product Section -->
+    <section id="products" class="product-section">
+        <div class="product-grid">
+            
+            <div class="product-item">
+                <a href="page1.html"
+                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/product_shop_1458048066.jpg" style="height: 280px;" alt="สินค้า 1">
+                </a>
+                <h3>ตุ๊กตาแมวเหมียว ขนาด 40cm.</h3>
+                <p>ตุ๊กตาแมวเหมียวมีขนาด 40 cm.  เหมียวตัวใหญ่ กอดได้เต็มที่ อบอุ่นฝันดีทั้งคืน</p>
+                <p>590 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
+            </div>
+            
+            <div class="product-item">
+                 <a href="page2.html"
+                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/O1CN01u9h6Hn1WDNeLYKE90_!!2528122754-0-cib.jpg" style="height: 280px;" alt="สินค้า 1">
+                </a>
+                <h3>ตุ๊กตาลูกแมว ขนฟูน่ารัก</h3>
+                <p>ตุ๊กตาแมว 3 สี ขนาด 50cmตุ๊กตาแมวส้ม ตุ๊กตาแมวเทา ตุ๊กตาแมวขาว</p>
+                <p>750 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
+            </div>
+            
+            <div class="product-item">
+                 <a href="page3.html"
+                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/D2A34B5C-000D-4EAA-BDBD-A6B20FB14E71.jpeg" style="height: 280px;" alt="สินค้า 1">
+                </a>
+                <h3>ตุ๊กตาแมว 3 สี 25cm</h3>
+                <p>ตุ๊กตาลูกแมว ขนฟูน่ารัก ขนาด 25cm มีทั้งหมด 3 สี สีขาวเทาส้ม, แมวส้ม และน้องแมวสีเทา</p>
+                <p>540 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
+            </div>
+
+            <div class="product-item">
+                <a href="page4.html"
+                    <img src="https://s.alicdn.com/@sc04/kf/Hadcdf2f852f749db88e9effdfa9e7112y.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
+                </a>
+                <h3>ตุ๊กตาการ์ตูนแมว</h3>
+                <p>ผ้าฝ้ายพีพี 31cm-50cm</p>
+                <p>245 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
+            </div>
+            
+            <div class="product-item">
+                 <a href="page5.html"
+                    <img src="https://s.alicdn.com/@sc04/kf/H70605d2800ef47d7a5833f86686f4dd4e.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
+                </a>
+                <h3>ตุ๊กตาแมวหมอนตุ๊กตาแมวยัดนุ่นนุ่ม</h3>
+                <p>ผ้าฝ้ายพีพี 40ซม.</p>
+                <p>343 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
+            </div>
+            
+            <div class="product-item">
+                 <a href="page6.html"
+                    <img src="https://s.alicdn.com/@sc04/kf/Ha38a7b7c09dc4bdb9ef9a92100682949l.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
+                </a>
+                <h3>Retractable Doll</h3>
+                <p>ผ้าฝ้ายพีพี 25-50cm</p>
+                <p>456 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
+            </div>
+
+            <div class="product-item">
+                 <a href="page7.html"
+                    <img src="https://s.alicdn.com/@sc04/kf/H7a76c352166740359e12c411736235773.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
+                </a>
+                <h3>Kawaii นกอ่อนตุ๊กตาของเล่นตุ๊กตาสัตว์</h3>
+                <p>ผ้าฝ้ายพีพี 30ซม.</p>
+                <p>960 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- การแจ้งเตือน -->
+    <div id="notification" class="notification">
+        <p>สั่งซื้อสำเร็จจ้า!</p>
+    </div>
+
+    <script>
+        function addToCart() {
+            // แสดงการแจ้งเตือน
+            const notification = document.getElementById('notification');
+            notification.classList.add('show');
+
+            // ซ่อนการแจ้งเตือนหลังจาก 3 วินาที
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
