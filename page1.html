@@ -17,5 +17,40 @@
         <p class="price">ราคา: 590 บาท</p>
         <button onclick="addToCart()">สั่งซื้อ</button>
     </div>
+
+    
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="orderToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">การสั่งซื้อ</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body bg-success text-white">
+            สั่งซื้อสำเร็จจ้า!
+        </div>
+    </div>
+</div>
+    
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+
+        // Toast Function for Order Confirmation
+        function addToCart() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
+    </script>
 </body>
 </html>
