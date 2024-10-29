@@ -105,6 +105,28 @@ body {
     background-color: #0056b3;
 }
 
+/* สไตล์การแจ้งเตือน */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s, transform 0.4s;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 /* การตั้งค่าการตอบสนองหน้าจอ */
 @media (max-width: 768px) {
     .product-grid {
