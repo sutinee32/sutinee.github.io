@@ -8,7 +8,10 @@
 </head>
 <body>
 
-    <!-- Contact Section -->
+    <header style="background-color: white;">
+        <div id="navbar-placeholder"></div>
+    </header>
+    
     <section class="contact-container">
         <h2>ติดต่อเรา</h2>
         <p>ติดตามเราและติดต่อผ่านช่องทางด้านล่างนี้</p>
@@ -24,6 +27,21 @@
             </a>
         </div>
     </section>
+
+     <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>
