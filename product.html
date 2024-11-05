@@ -8,6 +8,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+     <style>
+        .header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #E53935;
+            font-size: 2em;
+            margin: 0;
+        }
+        h4 {
+            color: #E53935;
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .highlight {
+            color: #E53935;
+            font-weight: bold;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .features li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: 10px;
+            left: -30px;
+            background-color: #E53935;
+            color: #fff;
+            padding: 5px 50px;
+            transform: rotate(-45deg);
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
 <body>
 
     <header style="background-color: white;">
@@ -37,33 +81,36 @@
                 <button onclick="addToCart()">สั่งซื้อ</button>
             </div>
             
-            <div class="product-item">
+            <div class="product-item position-relative">
+            <span class="sale-badge">ลดราคา</span>
                  <a href="page3.html">
                     <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/D2A34B5C-000D-4EAA-BDBD-A6B20FB14E71.jpeg" style="height: 280px;" alt="สินค้า 1">
                 </a>
                 <h3>ตุ๊กตาแมว 3 สี 25cm</h3>
                 <p>ตุ๊กตาลูกแมว ขนฟูน่ารัก ขนาด 25cm มีทั้งหมด 3 สี สีขาวเทาส้ม, แมวส้ม และน้องแมวสีเทา</p>
-                <p>540 บาท</p>
+                <p>320 บาท</p>
                 <button onclick="addToCart()">สั่งซื้อ</button>
             </div>
 
-            <div class="product-item">
+            <div class="product-item position-relative">
+                <span class="sale-badge">ลดราคา</span>
                 <a href="page4.html">
                     <img src="https://s.alicdn.com/@sc04/kf/Hadcdf2f852f749db88e9effdfa9e7112y.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
                 </a>
                 <h3>ตุ๊กตาการ์ตูนแมว</h3>
                 <p>ผ้าฝ้ายพีพี 31cm-50cm</p>
-                <p>245 บาท</p>
+                <p>115 บาท</p>
                 <button onclick="addToCart()">สั่งซื้อ</button>
             </div>
             
-            <div class="product-item">
+            <div class="product-item position-relative">
+                <span class="sale-badge">ลดราคา</span>
                  <a href="page5.html">
                     <img src="https://s.alicdn.com/@sc04/kf/H70605d2800ef47d7a5833f86686f4dd4e.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
                 </a>
                 <h3>ตุ๊กตาแมวหมอนตุ๊กตาแมวยัดนุ่นนุ่ม</h3>
                 <p>ผ้าฝ้ายพีพี 40ซม.</p>
-                <p>343 บาท</p>
+                <p>142 บาท</p>
                 <button onclick="addToCart()">สั่งซื้อ</button>
             </div>
             
