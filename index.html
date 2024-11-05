@@ -88,24 +88,24 @@
         <div class="product-grid">
             <div class="product-item position-relative">
                 <span class="sale-badge">ลดราคา</span>
-                <a href="page2.html">
-                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/O1CN01u9h6Hn1WDNeLYKE90_!!2528122754-0-cib.jpg" style="height: 280px;" alt="สินค้า 2">
+                <a href="page4.html">
+                    <img src="https://s.alicdn.com/@sc04/kf/Hadcdf2f852f749db88e9effdfa9e7112y.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
                 </a>
-                <h3>ตุ๊กตาลูกแมว ขนฟูน่ารัก</h3>
-                <p>ตุ๊กตาแมว 3 สี ขนาด 50cmตุ๊กตาแมวส้ม ตุ๊กตาแมวเทา ตุ๊กตาแมวขาว</p>
-                <p>750 บาท</p>
-                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
+                <h3>ตุ๊กตาการ์ตูนแมว</h3>
+                <p>ผ้าฝ้ายพีพี 31cm-50cm</p>
+                <p>115 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
             </div>
 
             <div class="product-item position-relative">
                 <span class="sale-badge">ลดราคา</span>
-                <a href="page2.html">
-                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/O1CN01u9h6Hn1WDNeLYKE90_!!2528122754-0-cib.jpg" style="height: 280px;" alt="สินค้า 2">
+                 <a href="page5.html">
+                    <img src="https://s.alicdn.com/@sc04/kf/H70605d2800ef47d7a5833f86686f4dd4e.jpg_720x720q50.jpg" style="height: 280px;" alt="สินค้า 1">
                 </a>
-                <h3>ตุ๊กตาลูกแมว ขนฟูน่ารัก</h3>
-                <p>ตุ๊กตาแมว 3 สี ขนาด 50cmตุ๊กตาแมวส้ม ตุ๊กตาแมวเทา ตุ๊กตาแมวขาว</p>
-                <p>750 บาท</p>
-                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
+                <h3>ตุ๊กตาแมวหมอนตุ๊กตาแมวยัดนุ่นนุ่ม</h3>
+                <p>ผ้าฝ้ายพีพี 40ซม.</p>
+                <p>142 บาท</p>
+                <button onclick="addToCart()">สั่งซื้อ</button>
             </div>
             
             <div class="product-item position-relative">
@@ -115,7 +115,7 @@
                 </a>
                 <h3>ตุ๊กตาแมว 3 สี 25cm</h3>
                 <p>ตุ๊กตาลูกแมว ขนฟูน่ารัก ขนาด 25cm มีทั้งหมด 3 สี สีขาวเทาส้ม, แมวส้ม และน้องแมวสีเทา</p>
-                <p>540 บาท</p>
+                <p>320 บาท</p>
                 <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
         </div>
@@ -158,25 +158,20 @@
         <div id="footer-placeholder"></div>
     </footer>
 
-    <div class="toast" id="cartToast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 20px; right: 20px;">
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="orderToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
-            <strong class="me-auto">ข้อมูลสินค้า</strong>
+            <strong class="me-auto">การสั่งซื้อ</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-        <div class="toast-body">
-            สินค้าได้ถูกเพิ่มลงในตะกร้าแล้ว!
+        <div class="toast-body bg-success text-white">
+            สั่งซื้อสำเร็จจ้า!
         </div>
     </div>
+</div>
 
-    <script>
-        function addToCart() {
-            // Logic to add the item to the cart
-            var toastEl = document.getElementById('cartToast');
-            var toast = new bootstrap.Toast(toastEl);
-            toast.show();
-        }
 
-        // Load the navbar and footer
+  <script>
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -187,6 +182,14 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
+
+        // Toast Function for Order Confirmation
+        function addToCart() {
+            var toastElement = document.getElementById('orderToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
     </script>
+    
 </body>
 </html>
