@@ -7,112 +7,95 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
-</head>
     <style>
-           body {
-        font-family: Arial, sans-serif;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        width: 90%;
-        max-width: 1200px; /* เพิ่มความกว้างสูงสุดเพื่อให้กริดดูดีขึ้น */
-        margin: 20px auto;
-        text-align: center;
-    }
-    .header {
-        background-color: #f4f4f4;
-        padding: 20px;
-        border-radius: 8px;
-    }
-    h1 {
-        color: #E53935;
-        font-size: 2em;
-        margin: 0;
-    }
-    p {
-        font-size: 1.2em;
-    }
-    .highlight {
-        color: #E53935;
-        font-weight: bold;
-    }
-    .button {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #E53935;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 1.2em;
-    }
-    .button:hover {
-        background-color: #D32F2F;
-    }
-    .features {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
-    }
-    .features li {
-        font-size: 1.1em;
-        margin-bottom: 10px;
-    }
-            .product-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-            .sale-badge {
-        position: absolute;
-        top: 10px;
-        left: -30px;
-        background-color: #E53935;
-        color: #fff;
-        padding: 5px 50px;
-        transform: rotate(-45deg);
-        font-size: 0.9em;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+        .header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #E53935;
+            font-size: 2em;
+            margin: 0;
+        }
+        h4 {
+            color: #E53935;
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .highlight {
+            color: #E53935;
+            font-weight: bold;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .features li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .sale-badge {
+            position: absolute;
+            top: 10px;
+            left: -30px;
+            background-color: #E53935;
+            color: #fff;
+            padding: 5px 50px;
+            transform: rotate(-45deg);
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .product-item img {
+            max-height: 200px;
+            object-fit: cover;
+        }
     </style>
+</head>
 <body>
 
     <header style="background-color: white;">
         <div id="navbar-placeholder"></div>
     </header>
     
-         <div id="demo" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://shortrecap.co/wp-content/uploads/2020/07/ShortrecapTemplate_v.3_10-07_salisa_v1cover_web.jpg" alt="Banner 1" class="d-block w-100" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYg35UsQ4YB-rGaRerYqj5oGz0Feklw1HiJw&s" alt="Banner 2" class="d-block w-100" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ3L36x9vQ77-BGSTj2dOFzW2WvoH_Utw3MWGvQg0WryswHcKMTmc8r1qyzh0gO8BfofI&usqp=CAU" alt="Banner 3" class="d-block w-100" loading="lazy">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" aria-label="Previous Slide">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" aria-label="Next Slide">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://shortrecap.co/wp-content/uploads/2020/07/ShortrecapTemplate_v.3_10-07_salisa_v1cover_web.jpg" alt="Banner 1" class="d-block w-100" loading="lazy">
             </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYg35UsQ4YB-rGaRerYqj5oGz0Feklw1HiJw&s" alt="Banner 2" class="d-block w-100" loading="lazy">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ3L36x9vQ77-BGSTj2dOFzW2WvoH_Utw3MWGvQg0WryswHcKMTmc8r1qyzh0gO8BfofI&usqp=CAU" alt="Banner 3" class="d-block w-100" loading="lazy">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" aria-label="Previous Slide">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next" aria-label="Next Slide">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
     <section id="products" class="product-section">
-            <h4>สินค้าที่กำลังมีโปรโมชั่น</h4>
+        <h4 class="text-center my-4">สินค้าที่กำลังมีโปรโมชั่น</h4>
         <div class="product-grid">
-            <div class="product-item">
+            <div class="product-item position-relative">
                 <span class="sale-badge">ลดราคา</span>
                 <a href="page1.html">
                     <img src="https://img.lazcdn.com/g/p/cd60ac2a71e9d0e96543a1cf272705bd.jpg_720x720q80.jpg" alt="สินค้า 1">
@@ -120,10 +103,10 @@
                 <h3>ตุ๊กตาแมวเหมียว ขนาด 40cm.</h3>
                 <p>ตุ๊กตาแมวเหมียวมีขนาด 40 cm. เหมียวตัวใหญ่ กอดได้เต็มที่ อบอุ่นฝันดีทั้งคืน</p>
                 <p>590 บาท</p>
-                <button onclick="addToCart()">สั่งซื้อ</button>
+                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
 
-            <div class="product-item">
+            <div class="product-item position-relative">
                 <span class="sale-badge">ลดราคา</span>
                 <a href="page2.html">
                     <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/O1CN01u9h6Hn1WDNeLYKE90_!!2528122754-0-cib.jpg" alt="สินค้า 2">
@@ -131,10 +114,10 @@
                 <h3>ตุ๊กตาลูกแมว ขนฟูน่ารัก</h3>
                 <p>ตุ๊กตาแมว 3 สี ขนาด 50cmตุ๊กตาแมวส้ม ตุ๊กตาแมวเทา ตุ๊กตาแมวขาว</p>
                 <p>750 บาท</p>
-                <button onclick="addToCart()">สั่งซื้อ</button>
+                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
             
-            <div class="product-item">
+            <div class="product-item position-relative">
                 <span class="sale-badge">ลดราคา</span>
                 <a href="page3.html">
                     <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/D2A34B5C-000D-4EAA-BDBD-A6B20FB14E71.jpeg" alt="สินค้า 3">
@@ -142,11 +125,11 @@
                 <h3>ตุ๊กตาแมว 3 สี 25cm</h3>
                 <p>ตุ๊กตาลูกแมว ขนฟูน่ารัก ขนาด 25cm มีทั้งหมด 3 สี สีขาวเทาส้ม, แมวส้ม และน้องแมวสีเทา</p>
                 <p>540 บาท</p>
-                <button onclick="addToCart()">สั่งซื้อ</button>
+                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
         </div>
 
-    <h4>สินค้าแนะนำ</h4>
+        <h4 class="text-center my-4">สินค้าแนะนำ</h4>
         <div class="product-grid">
             <div class="product-item">
                 <a href="page1.html">
@@ -155,48 +138,54 @@
                 <h3>ตุ๊กตาแมวเหมียว ขนาด 40cm.</h3>
                 <p>ตุ๊กตาแมวเหมียวมีขนาด 40 cm. เหมียวตัวใหญ่ กอดได้เต็มที่ อบอุ่นฝันดีทั้งคืน</p>
                 <p>590 บาท</p>
-                <button onclick="addToCart()">สั่งซื้อ</button>
+                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
 
-             <div class="product-item">
-                 <a href="page2.html">
-                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/O1CN01u9h6Hn1WDNeLYKE90_!!2528122754-0-cib.jpg" style="height: 280px;" alt="สินค้า 1">
+            <div class="product-item">
+                <a href="page2.html">
+                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/O1CN01u9h6Hn1WDNeLYKE90_!!2528122754-0-cib.jpg" style="height: 280px;" alt="สินค้า 2">
                 </a>
                 <h3>ตุ๊กตาลูกแมว ขนฟูน่ารัก</h3>
                 <p>ตุ๊กตาแมว 3 สี ขนาด 50cmตุ๊กตาแมวส้ม ตุ๊กตาแมวเทา ตุ๊กตาแมวขาว</p>
                 <p>750 บาท</p>
-                <button onclick="addToCart()">สั่งซื้อ</button>
+                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
             
             <div class="product-item">
-                 <a href="page3.html">
-                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/D2A34B5C-000D-4EAA-BDBD-A6B20FB14E71.jpeg" style="height: 280px;" alt="สินค้า 1">
+                <a href="page3.html">
+                    <img src="https://www.tukkatalovely.com/assets/image/shop_product/tukkatalovely/D2A34B5C-000D-4EAA-BDBD-A6B20FB14E71.jpeg" style="height: 280px;" alt="สินค้า 3">
                 </a>
                 <h3>ตุ๊กตาแมว 3 สี 25cm</h3>
                 <p>ตุ๊กตาลูกแมว ขนฟูน่ารัก ขนาด 25cm มีทั้งหมด 3 สี สีขาวเทาส้ม, แมวส้ม และน้องแมวสีเทา</p>
                 <p>540 บาท</p>
-                <button onclick="addToCart()">สั่งซื้อ</button>
+                <button class="btn btn-danger" onclick="addToCart()">สั่งซื้อ</button>
             </div>
-            
         </div>
     </section>
 
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="orderToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <div class="toast" id="cartToast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 20px; right: 20px;">
         <div class="toast-header">
-            <strong class="me-auto">การสั่งซื้อ</strong>
+            <strong class="me-auto">ข้อมูลสินค้า</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-        <div class="toast-body bg-success text-white">
-            สั่งซื้อสำเร็จจ้า!
+        <div class="toast-body">
+            สินค้าได้ถูกเพิ่มลงในตะกร้าแล้ว!
         </div>
     </div>
-</div>
-
-
-    <div id="footer-placeholder"></div>
 
     <script>
+        function addToCart() {
+            // Logic to add the item to the cart
+            var toastEl = document.getElementById('cartToast');
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
+
+        // Load the navbar and footer
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -207,14 +196,6 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
-
-        // Toast Function for Order Confirmation
-        function addToCart() {
-            var toastElement = document.getElementById('orderToast');
-            var toast = new bootstrap.Toast(toastElement);
-            toast.show();
-        }
     </script>
-
 </body>
 </html>
